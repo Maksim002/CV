@@ -2,6 +2,10 @@ package com.example.cv.ui.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 import androidx.viewpager.widget.ViewPager;;
 import android.os.Bundle;
 
@@ -10,6 +14,7 @@ import com.example.cv.ui.fragment.FragmentAll;
 import com.example.cv.ui.fragment.FragmentBurning;
 import com.example.cv.ui.fragment.FragmentPermanent;
 import com.example.cv.ui.adapters.pager.ViewPagerAdapter;
+import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,7 +39,9 @@ public class MainActivity extends AppCompatActivity {
         tableLayout = findViewById(R.id.tablayout);
 
         setupViewPager();
+
     }
+
     private void setupViewPager(){
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setOffscreenPageLimit(3);
